@@ -6,16 +6,17 @@ import { AboutComponent } from './core/about/about.component';
 import { E404Component } from './core/e404/e404.component';
 
 import { UserListComponent } from './user/user-list/user-list.component';
+import { UserDetailComponent } from './user/user-detail/user-detail.component';
 
 const routes: Routes = [
 { path: 'home', component: HomeComponent },
-{ path: '**', component: E404Component },
 { path: 'about', component: AboutComponent },
+{ path: 'user/list', component: UserListComponent},
+{ path: 'user/detail/:id', component: UserDetailComponent},
 
-{ path: 'user/list', component: UserListComponent}
+{ path: '**', component: E404Component }
 
 ];
-
 // the below was generated
 @NgModule({
   imports: [RouterModule.forRoot(routes)],

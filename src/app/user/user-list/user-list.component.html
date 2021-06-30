@@ -9,22 +9,25 @@
             <thead>
                 <tr>
                     <th><button (click)="sortFn('id')" class="btn btn-link">Id</button></th>
-                    <th><button (click)="sortFn('lastname')" class="btn btn-link">Lastname</button></th>  
+                    <th><button (click)="sortFn('username')" class="btn btn-link">Username</button></th> 
+                    <th>Firstname</th>
+                    <th>Lastname</th> 
                     <th>Phone</th>
                     <th>Email</th>
                     <th>IsReviewer</th>
                     <th>IsAdmin</th>
-                    <th>Actions</th>
                 </tr>
             </thead>
             <tbody>
                 <tr *ngFor="let u of users">
                     <td>{{u.id}}</td>
+                    <td>{{u.username}}</td>
+                    <td>{{u.firstname}}</td>
                     <td>{{u.lastname}}</td>
                     <td>{{u.phone}}</td>
                     <td>{{u.email}}</td>
-                    <td>{{u.isreviewer}}</td>
-                    <td>{{u.isadmin}}</td>
+                    <td>{{u.isReviewer}}</td>
+                    <td>{{u.isAdmin}}</td>
                     <td>
                         <span>
                             <a routerLink="/user/detail/{{u.id}}">Detail</a>

@@ -16,7 +16,7 @@ constructor(
 ) {}
 
 list(): Observable<User[]> {
-    return this.http.get(`$this.baseurl}`) as Observable<User[]>;
+    return this.http.get(`${this.baseurl}`) as Observable<User[]>;
 }
 get(id:number): Observable<User> {
     return this.http.get(`${this.baseurl}/${id}`) as Observable<User>;
