@@ -8,6 +8,9 @@ import { User } from "./user.class";
 })
 
 export class UserService {
+put(user: any) {
+  throw new Error('Method not implemented.');
+}
 
 baseurl: string = "http://localhost:40972/api/users";
 

@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { Menu } from '../menu.class';
 
+
 @Component({
   selector: 'app-menu',
   templateUrl: './menu.component.html',
