@@ -4,12 +4,10 @@ import { User } from '../user.class' ;
 import { UserService } from '../user.service' ;
 import { SystemService } from 'src/app/core/system.service' ;
 
-
 @Component({
   selector: 'app-user-create',
   templateUrl: './user-create.component.html',
   styleUrls: ['./user-create.component.css']
-
 })
 export class UserCreateComponent implements OnInit {
 

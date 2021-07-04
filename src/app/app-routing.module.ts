@@ -10,14 +10,21 @@ import { UserDetailComponent } from './user/user-detail/user-detail.component';
 import { UserCreateComponent } from './user/user-create/user-create.component';
 import { UserEditComponent } from './user/user-edit/user-edit.component';
 
+import { ProductListComponent } from './product/product-list/product-list.component';
+import { ProductDetailComponent } from './product/product-detail/product-detail.component';
+import { ProductCreateComponent } from './product/product-create/product-create.component';
+
 const routes: Routes = [
 { path: 'home', component: HomeComponent },
 { path: 'about', component: AboutComponent },
 
-{ path: 'user/list', component: UserListComponent},
-{ path: 'user/detail/:id', component: UserDetailComponent},
-{ path: 'user/create', component: UserCreateComponent},
-{ path: 'user/edit', component: UserEditComponent},
+{ path: 'user/list', component: UserListComponent },
+{ path: 'user/detail/:id', component: UserDetailComponent },
+{ path: 'user/create', component: UserCreateComponent },
+{ path: 'user/edit', component: UserEditComponent },
+
+{ path: 'product/list', component: ProductListComponent},
+{ path: 'product/create', component: ProductCreateComponent },
 
 { path: '**', component: E404Component }
 
