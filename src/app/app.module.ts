@@ -24,9 +24,6 @@ import { VendorCreateComponent } from './vendor/vendor-create/vendor-create.comp
 import { VendorDetailComponent } from './vendor/vendor-detail/vendor-detail.component';
 import { VendorEditComponent } from './vendor/vendor-edit/vendor-edit.component';
 
-
-
-
 @NgModule({
   declarations: [
     AppComponent,
@@ -37,12 +34,13 @@ import { VendorEditComponent } from './vendor/vendor-edit/vendor-edit.component'
     UserDetailComponent,
     UserCreateComponent,
     UserEditComponent,
-    ProductComponent,
+    ProductListComponent,
     ProductCreateComponent,
     ProductDetailComponent,
     ProductEditComponent,
     VendorCreateComponent,
     VendorDetailComponent,
+    VendorListComponent,
     VendorEditComponent
   ],
   imports: [

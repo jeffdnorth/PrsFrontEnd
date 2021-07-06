@@ -13,6 +13,7 @@ import { UserEditComponent } from './user/user-edit/user-edit.component';
 import { ProductListComponent } from './product/product-list/product-list.component';
 import { ProductDetailComponent } from './product/product-detail/product-detail.component';
 import { ProductCreateComponent } from './product/product-create/product-create.component';
+import { ProductEditComponent } from './product/product-edit/product-edit.component';
 
 const routes: Routes = [
 { path: 'home', component: HomeComponent },
@@ -24,7 +25,10 @@ const routes: Routes = [
 { path: 'user/edit', component: UserEditComponent },
 
 { path: 'product/list', component: ProductListComponent},
+{ path: 'product/detail/:id', component: ProductDetailComponent},
 { path: 'product/create', component: ProductCreateComponent },
+{ path: 'product/edit', component: ProductEditComponent},
+
 
 { path: '**', component: E404Component }
 
