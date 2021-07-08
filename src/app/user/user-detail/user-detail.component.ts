@@ -12,7 +12,8 @@ import { UserService } from '../user.service';
 export class UserDetailComponent implements OnInit {
 
   user!: User;
-  searchCriteria: string = "";
+  id: number = 0;
+
   // sort column for pipe 
   sortColumn: string = "id";
   sortAsc: boolean = true;
@@ -30,25 +31,25 @@ export class UserDetailComponent implements OnInit {
     private usersvc: UserService,
     private route: ActivatedRoute
   ) { }
-  //the below is incorrect -not needed for capstone
-  // EXTRA CLSING PARENS AFTER SUBSCRIBE?
-  //delete(): void {
-    //this.user.id = -this.user.id; 
-    //console.debug(this.user);
-    //this.usersvc.delete(this.user).subscribe(
-     //  res => { console.debug("User deleted successfully!"); },
-      // err => { console.error(err); }     
-  //  );
-  //}
 
   ngOnInit(): void {
-    let id = this.route.snapshot.params.id;
-    this.usersvc.get(id).subscribe(
+    this.id = this.route.snapshot.params.id
+    this.usersvc.get(this.id).subscribe(
       res => {
-        console.debug("Users:", res);
+        console.log(res);
         this.user = res;
       },
-      err => { console.error(err); }
-    );
+      err => { console.error(err) }
+    )
   }
+    //the below not needed for capstone per Greg
+  //deleteUser(): {
+    //this.id = -this.route.snapshot.params.id
+    //this.usersvc.remove(this.id).subscribe(
+     //  res => { console.log("User deleted successfully!", res);
+      // this.user = res; this.router.navigateByUrl("user/list") },
+      // err => { console.error(err); }     
+  //    );
+  //  }
+
 }

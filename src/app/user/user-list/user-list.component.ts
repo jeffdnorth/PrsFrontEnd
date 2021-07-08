@@ -12,7 +12,7 @@ export class UserListComponent implements OnInit {
   users: User[] = [];
   searchCriteria: string = "";
 
-  // sort column for pipe WHEN READY
+ 
   sortColumn: string = "id";
   sortAsc: boolean = true;
   sortFn(column: string): void {

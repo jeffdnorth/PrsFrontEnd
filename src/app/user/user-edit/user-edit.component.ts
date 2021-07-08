@@ -23,12 +23,12 @@ export class UserEditComponent implements OnInit {
 //double check for issues
   save(): void {
     this.user.id = +this.user.id;
-     // console.debug("B4", this.user);
-    console.debug(this.user.id);
+     // console.debug("B4", this.user); (Greg's)
+    console.debug("B4", this.user);
     this.usersvc.change(this.user).subscribe(
        res => { console.log("User edited successfully!"); 
          this.router.navigateByUrl("user/list"); },
-         err => { console.error(err); }
+         err => { console.error(err) }
     );
   }
 

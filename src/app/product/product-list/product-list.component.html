@@ -8,24 +8,25 @@
         <table class="table table-striped table-sm">
             <thead>
                 <tr>
-                    <th><button (click)="sortFn('id')" class="btn btn-link">Id</button></th>
-                    <th>PartNbr</th>
+                    <th><button (click)="sortFn('id')" class="btn btn-link">Id</button></th> 
                     <th>Name</th>
+                    <th>PartNbr</th>
                     <th>Price</th> 
                     <th>Unit</th>
                     <th>PhotoPath</th>
                     <th>VendorId</th>
+                    <th>Actions</th>
                 </tr>
             </thead>
             <tbody>
                 <tr *ngFor="let p of products">
                     <td>{{p.id}}</td>
-                    <td>{{p.partnbr}}</td>
+                    <td>{{p.partNbr}}</td>
                     <td>{{p.name}}</td>
-                    <td>{{p.price}}</td>
+                    <td>{{p.price | currency}}</td>
                     <td>{{p.unit}}</td>
                     <td>{{p.photopath}}</td>
-                    <td>{{p.vendorid}}</td>
+                    <td>{{p.vendorId}}</td>
                     <td>
                         <span>
                             <a routerLink="/product/detail/{{p.id}}">Detail</a>
@@ -41,3 +42,5 @@
     </div>
 </div>
 
+<!-- <th><button (click)="sortFn('id')" class="btn btn-link">Id</button></th> -->
+<!-- when have pipe ready use line 21  <tr *ngFor="let p of products | sort: sortColumn:sortAsc"> -->

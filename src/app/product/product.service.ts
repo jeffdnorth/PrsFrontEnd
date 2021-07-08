@@ -28,9 +28,9 @@ create(product: Product): Observable<Product> {
   return this.http.post(`${this.baseurl}`, product) as Observable<Product>;
 }
 change(product: Product): Observable<any> {
-  return this.http.put(`${this.baseurl}/${product.id}`, Product) as Observable<any>;
+  return this.http.put(`${this.baseurl}/${product.id}`, product) as Observable<any>;
 }
-remove(product: Product): Observable<Product> {
-  return this.http.delete(`${this.baseurl}/${product.id}`) as Observable<Product>;
+remove(id: number): Observable<Product> {
+  return this.http.delete(`${this.baseurl}/${id}`) as Observable<Product>;
 }
 }

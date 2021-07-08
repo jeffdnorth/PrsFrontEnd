@@ -12,6 +12,7 @@ import { SystemService } from 'src/app/core/system.service' ;
 export class UserCreateComponent implements OnInit {
 
   user: User = new User();
+  users: User[] = [];
 
   constructor(
     private syssvc: SystemService,
@@ -20,16 +21,21 @@ export class UserCreateComponent implements OnInit {
   ) { }
 
   save(): void {
+    this.user.id = +this.user.id;
     console.debug("B4", this.user);
     this.usersvc.create(this.user).subscribe(
        res => { 
-         console.debug("User created successfully!"); 
-         this.router.navigateByUrl('/user/list')
+         console.log("User created successfully!"); 
+         this.router.navigateByUrl('user/list')
         },
        err => { console.error(err); }
     );
   }
 
   ngOnInit(): void {
+    this.usersvc.list().subscribe(
+      res => { console.log(res); this.users = res; },
+      err => { console.error(err); }
+    )
   }
 }
