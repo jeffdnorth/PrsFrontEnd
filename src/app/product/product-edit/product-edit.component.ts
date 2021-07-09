@@ -21,6 +21,14 @@ export class ProductEditComponent implements OnInit {
     private route: ActivatedRoute
   ) { }
 
+  
+  ngOnInit(): void {
+    this.id = this.route.snapshot.params.id
+    this.productsvc.get(this.id).subscribe(
+      res => { console.log(res); this.product = res; },
+      err => {console.error(err) } ) ;
+  }
+
   save(): void {
     this.product.id = +this.product.id;
      // console.debug("B4", this.product);
@@ -31,12 +39,5 @@ export class ProductEditComponent implements OnInit {
         err => { console.error(err); }
     );
   }
-  
-  ngOnInit(): void {
-    this.id = this.route.snapshot.params.id
-    this.productsvc.get(this.id).subscribe(
-      res => { console.log(res); this.product = res; },
-      err => {console.error(err) } ) ;
 
-  }
 }
