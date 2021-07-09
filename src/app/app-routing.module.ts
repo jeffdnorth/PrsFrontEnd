@@ -31,12 +31,12 @@ const routes: Routes = [
 { path: 'product/list', component: ProductListComponent},
 { path: 'product/detail/:id', component: ProductDetailComponent},
 { path: 'product/create', component: ProductCreateComponent },
-{ path: 'product/edit', component: ProductEditComponent},
+{ path: 'product/edit/:id', component: ProductEditComponent},
 
 { path: 'vendor/list', component: VendorListComponent},
 { path: 'vendor/detail/:id', component: VendorDetailComponent},
 { path: 'vendor/create', component: VendorCreateComponent},
-{ path: 'vendor/edit', component: VendorEditComponent},
+{ path: 'vendor/edit/:id', component: VendorEditComponent},
 
 
 { path: '**', component: E404Component }
