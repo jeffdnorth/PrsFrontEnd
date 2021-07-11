@@ -1,33 +1,36 @@
 <!-- FROM USER CREATE -->
+<app-menu></app-menu>
 <div>
     <table class="table table-sm">
         <tr>
             <td>Id</td>
-            <td><input [(ngModel)]="product.id" type="number" disabled></td>
+            <td><input [(ngModel)]="product.id" type="number" name="Id" disabled></td>
         </tr>
         <tr>
             <td>PartNbr</td>
-            <td><input [(ngModel)]="product.partNbr" type="text"></td>
+            <td><input [(ngModel)]="product.partNbr" type="text"  name="partnbr" placeholder="PartNbr"></td>
         </tr>
         <tr>
             <td>Name</td>
-            <td><input [(ngModel)]="product.name" type="text"></td>
+            <td><input [(ngModel)]="product.name" type="text" name="name" placeholder="Name"></td>
         </tr>
         <tr>
             <td>Price</td>
-            <td><input [(ngModel)]="product.price" type="text"></td>
+            <td><input [(ngModel)]="product.price" type="number" name="price" placeholder="Price"></td>
         </tr>
         <tr>
             <td>Unit</td>
-            <td><input [(ngModel)]="product.unit" type="text"></td>
+            <td><input [(ngModel)]="product.unit" type="text" name="unit" placeholder="Unit"></td>
         </tr>
         <tr>
             <td>PhotoPath</td>
-            <td><input [(ngModel)]="product.photopath" type="text"></td>
+            <td><input [(ngModel)]="product.photopath" type="text" name="photopath" placeholder="PhotoPath"></td>
         </tr>
         <tr>
             <td>VendorId</td>
-            <td><input [(ngModel)]="product.vendorId" type="checkbox"></td>
+            <select [(ngModel)]="product.vendorId">
+                <option *ngFor="let v of vendors" value="{{v.id}}">{{v.id}}:{{v.name}}</option>
+            </select>
         </tr>
     </table>
      <button (click)="save()" class="bttn btn-primary">Save</button> 

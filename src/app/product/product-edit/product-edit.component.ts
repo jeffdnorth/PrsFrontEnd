@@ -3,6 +3,8 @@ import { ActivatedRoute, Router } from '@angular/router';
 import { SystemService } from 'src/app/core/system.service';
 import { Product } from '../product.class';
 import { ProductService } from '../product.service';
+import { Vendor } from 'src/app/vendor/vendor.class';
+import { VendorService } from 'src/app/vendor/vendor.service';
 
 @Component({
   selector: 'app-product-edit',
@@ -13,6 +15,7 @@ export class ProductEditComponent implements OnInit {
 
     product!: Product;
     id: number = 0;
+    vendors: Vendor[] = [];
 
   constructor(
     private productsvc: ProductService,

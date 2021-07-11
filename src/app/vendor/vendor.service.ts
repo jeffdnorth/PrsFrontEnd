@@ -21,14 +21,14 @@ baseurl: string = "http://localhost:40972/api/vendors";
   list(): Observable<Vendor[]> {
       return this.http.get(`${this.baseurl}`) as Observable<Vendor[]>;
   }
-  get(id:number): Observable<Vendor> {
+  get(id: number): Observable<Vendor> {
     return this.http.get(`${this.baseurl}/${id}`) as Observable<Vendor>;
 }
 create(vendor: Vendor): Observable<Vendor> {
     return this.http.post(`${this.baseurl}`, vendor) as Observable<Vendor>;
 }
 change(vendor: Vendor): Observable<any> {
-    return this.http.put(`${this.baseurl}/${vendor.id}`, Vendor) as Observable<any>;
+    return this.http.put(`${this.baseurl}/${vendor.id}`, vendor) as Observable<any>;
 }
 remove(id: number): Observable<Vendor> {
     return this.http.delete(`${this.baseurl}/${id}`) as Observable<Vendor>;

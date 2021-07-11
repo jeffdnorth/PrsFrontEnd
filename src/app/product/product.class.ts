@@ -5,13 +5,13 @@ export class Product {
     partNbr: string = '';
     name: string = '';
     price: number = 0;
-    unit: string = '';
-    photopath: string = 'per';
+    unit: string = 'per';
+    photopath: string = '';
 
     vendorId: number = 0;
     
     vendor!: Vendor
     
-    // variation    vendor: Vendor | null = null;
+    //vendor: Vendor | null = null;
 
 }
