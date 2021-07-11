@@ -10,7 +10,6 @@ import { SystemService } from 'src/app/core/system.service';
   styleUrls: ['./user-edit.component.css']
 })
 export class UserEditComponent implements OnInit {
-  // ?? this variation works for edit
   user!: User;
   id: number = 0;
   
@@ -24,9 +23,11 @@ export class UserEditComponent implements OnInit {
 
   ngOnInit(): void {
     this.id = this.route.snapshot.params.id
-    this.usersvc.get(this.id).subscribe(
+    this.usersvc.get(this.id).subscribe
+    (
       res => { console.log(res); this.user = res; },
-      err => {console.error(err) } )  
+      err => {console.error(err) }
+       )  ;
     }
    
   save(): void {
@@ -39,16 +40,7 @@ export class UserEditComponent implements OnInit {
 },
 err => { console.error(err) } 
 );
-    
 
-    // console.debug("B4", this.user);
-    // this.usersvc.change(this.user).subscribe (
-    //   res => { console.log("This user edited successfully!"); 
-    //           this.router.navigateByUrl('user/list');
-    // },
-    //   err => { console.error(err) } );
-
-    
   }     
   
 }
