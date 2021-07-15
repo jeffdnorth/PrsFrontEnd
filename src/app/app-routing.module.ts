@@ -10,6 +10,8 @@ import { UserDetailComponent } from './user/user-detail/user-detail.component';
 import { UserCreateComponent } from './user/user-create/user-create.component';
 import { UserEditComponent } from './user/user-edit/user-edit.component';
 
+import { UserloginComponent } from './userlogin/userlogin.component';
+
 import { ProductListComponent } from './product/product-list/product-list.component';
 import { ProductDetailComponent } from './product/product-detail/product-detail.component';
 import { ProductCreateComponent } from './product/product-create/product-create.component';
@@ -21,6 +23,13 @@ import { VendorCreateComponent } from './vendor/vendor-create/vendor-create.comp
 import { VendorEditComponent } from './vendor/vendor-edit/vendor-edit.component';
 
 const routes: Routes = [
+
+{ path: '' , redirectTo: '/menu', pathMatch:'full'},
+
+  // { path: '' , redirectTo: '/login' , pathMatch: 'full'},
+{ path: 'login', component: UserloginComponent},
+
+
 { path: 'home', component: HomeComponent },
 { path: 'about', component: AboutComponent },
 

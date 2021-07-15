@@ -36,6 +36,8 @@ remove(id: number): Observable<User> {
 
 login(username: string, password: string): Observable<User>
 {
-    return this.http.get(`${this.baseurl}${username}/${password}`) as Observable<User>;
+    return this.http.get(`${this.baseurl}/${username}/${password}`) as Observable<User>;
 }
+ngOnInit(): void {}
+
 }

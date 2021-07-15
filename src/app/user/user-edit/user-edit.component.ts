@@ -38,7 +38,7 @@ export class UserEditComponent implements OnInit {
       res => { console.log("This user edited successfully!"); 
       this.router.navigateByUrl('user/list');
 },
-err => { console.error(err) } 
+err => { console.error(err); } 
 );
 
   }     

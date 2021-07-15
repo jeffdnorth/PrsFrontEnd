@@ -23,6 +23,10 @@ import { VendorListComponent } from './vendor/vendor-list/vendor-list.component'
 import { VendorDetailComponent } from './vendor/vendor-detail/vendor-detail.component';
 import { VendorCreateComponent } from './vendor/vendor-create/vendor-create.component';
 import { VendorEditComponent } from './vendor/vendor-edit/vendor-edit.component';
+import { SortPipe } from './core/sort.pipe';
+import { SearchPipe } from './user/search.pipe';
+import { UserloginComponent } from './userlogin/userlogin.component';
+
 
 
 
@@ -46,7 +50,11 @@ import { VendorEditComponent } from './vendor/vendor-edit/vendor-edit.component'
     VendorListComponent,
     VendorDetailComponent,
     VendorCreateComponent,
-    VendorEditComponent
+    VendorEditComponent,
+    SortPipe,
+    SearchPipe,
+    UserloginComponent
+ 
   ],
   imports: [
     BrowserModule,

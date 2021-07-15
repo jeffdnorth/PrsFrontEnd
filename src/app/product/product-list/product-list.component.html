@@ -9,6 +9,7 @@
             <thead>
                 <tr>
                     <th><button (click)="sortFn('id')" class="btn btn-light">Id</button></th> 
+                    <th><button (click)="sortFn('partNbr')" class="btn btn-light">PartNbr</button></th> 
                     <th>Name</th>
                     <th>PartNbr</th>
                     <th>Price</th> 
@@ -19,7 +20,7 @@
                 </tr>
             </thead>
             <tbody>
-                <tr *ngFor="let p of products">
+                <tr *ngFor="let p of products | sort: sortColumn:sortAsc ">
                     <td>{{p.id}}</td>
                     <td>{{p.name}}</td>
                     <td>{{p.partNbr}}</td>
@@ -42,5 +43,3 @@
     </div>
 </div>
 
-<!-- <th><button (click)="sortFn('id')" class="btn btn-link">Id</button></th> -->
-<!-- when have pipe ready use line 21  <tr *ngFor="let p of products | sort: sortColumn:sortAsc"> -->
