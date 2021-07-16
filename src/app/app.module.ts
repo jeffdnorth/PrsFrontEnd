@@ -26,6 +26,10 @@ import { VendorEditComponent } from './vendor/vendor-edit/vendor-edit.component'
 import { SortPipe } from './core/sort.pipe';
 import { SearchPipe } from './user/search.pipe';
 import { UserloginComponent } from './userlogin/userlogin.component';
+import { RequestCreateComponent } from './request/request-create/request-create.component';
+import { RequestDetailComponent } from './request/request-detail/request-detail.component';
+import { RequestEditComponent } from './request/request-edit/request-edit.component';
+import { RequestListComponent } from './request/request-list/request-list.component';
 
 
 
@@ -53,7 +57,11 @@ import { UserloginComponent } from './userlogin/userlogin.component';
     VendorEditComponent,
     SortPipe,
     SearchPipe,
-    UserloginComponent
+    UserloginComponent,
+    RequestCreateComponent,
+    RequestDetailComponent,
+    RequestEditComponent,
+    RequestListComponent
  
   ],
   imports: [
