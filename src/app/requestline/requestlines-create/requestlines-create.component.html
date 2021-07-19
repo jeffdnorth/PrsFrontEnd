@@ -1,0 +1,22 @@
+<app-menu></app-menu>
+<div> -->
+ <table class="table table-sm">
+        <tr>
+            <td>Request Id</td>
+            <td><input [(ngModel)]="requestId" type="number" disabled></td>
+        </tr>
+        <tr>
+            <td>Quantity</td>
+            <td><input [(ngModel)]="newRequestline.quantity" type="number" ></td>
+        </tr>
+        <tr>
+            <td>ProductId</td>
+            <td>
+                <select [(ngModel)]="newRequestline.productId">
+                    <option *ngFor="let p of products" value={{p.id}}>{{p.name}}</option>
+                </select>
+            </td>
+        </tr>
+    </table>
+    <button (click)='Save()' class="btn btn-primary">Save</button>
+</div>

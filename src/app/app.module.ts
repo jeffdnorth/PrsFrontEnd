@@ -30,6 +30,12 @@ import { RequestCreateComponent } from './request/request-create/request-create.
 import { RequestDetailComponent } from './request/request-detail/request-detail.component';
 import { RequestEditComponent } from './request/request-edit/request-edit.component';
 import { RequestListComponent } from './request/request-list/request-list.component';
+import { RequestLinesComponent } from './requestline/request-lines/request-lines.component';
+import { RequestlinesCreateComponent } from './requestline/requestlines-create/requestlines-create.component';
+import { RequestlinesDetailComponent } from './requestline/requestlines-detail/requestlines-detail.component';
+import { RequestlinesEditComponent } from './requestline/requestlines-edit/requestlines-edit.component';
+import { RequestReviewItemComponent } from './request/request-review-item/request-review-item.component';
+import { RequestReviewListComponent } from './request/request-review-list/request-review-list.component';
 
 
 
@@ -61,7 +67,13 @@ import { RequestListComponent } from './request/request-list/request-list.compon
     RequestCreateComponent,
     RequestDetailComponent,
     RequestEditComponent,
-    RequestListComponent
+    RequestListComponent,
+    RequestLinesComponent,
+    RequestlinesCreateComponent,
+    RequestlinesDetailComponent,
+    RequestlinesEditComponent,
+    RequestReviewItemComponent,
+    RequestReviewListComponent
  
   ],
   imports: [
