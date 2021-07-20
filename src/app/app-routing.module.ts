@@ -22,18 +22,25 @@ import { VendorDetailComponent } from './vendor/vendor-detail/vendor-detail.comp
 import { VendorCreateComponent } from './vendor/vendor-create/vendor-create.component';
 import { VendorEditComponent } from './vendor/vendor-edit/vendor-edit.component';
 
-import { RequestLinesComponent } from './requestline/request-lines/request-lines.component';
-
 import { RequestCreateComponent } from './request/request-create/request-create.component';
 import { RequestDetailComponent } from './request/request-detail/request-detail.component';
 import { RequestEditComponent } from './request/request-edit/request-edit.component';
 import { RequestListComponent } from './request/request-list/request-list.component';
 
+import { RequestReviewItemComponent } from './request/request-review-item/request-review-item.component';
+import { RequestReviewListComponent } from './request/request-review-list/request-review-list.component';
+
+import { RequestLinesComponent } from './requestline/request-lines/request-lines.component';
+
+import { RequestlinesCreateComponent } from './requestline/requestlines-create/requestlines-create.component';
+import { RequestlinesDetailComponent } from './requestline/requestlines-detail/requestlines-detail.component';
+import { RequestlinesEditComponent } from './requestline/requestlines-edit/requestlines-edit.component';
+
+
 const routes: Routes = [
 
 { path: '' , redirectTo: '/menu', pathMatch:'full'},
-
-    { path: '' , redirectTo: '/login' , pathMatch: 'full'},
+{ path: '' , redirectTo: '/login' , pathMatch: 'full'},
 { path: 'login', component: UserloginComponent},
 
 
@@ -60,7 +67,13 @@ const routes: Routes = [
 { path: 'request/create', component: RequestCreateComponent },
 { path: 'request/edit/:id', component: RequestEditComponent },
 
+{path: 'request/lines/:id' , component: RequestLinesComponent},
+{path: 'requestlines/create/:id' , component: RequestlinesCreateComponent},
+{path: 'requestlines/edit/:id' , component: RequestlinesEditComponent},
+{path: 'requestlines/detail/:id' , component: RequestlinesDetailComponent},
 
+{path: 'request/review/item/:id' , component: RequestReviewItemComponent},
+{path: 'request/review/list' , component: RequestReviewListComponent},
 
 
 { path: '**', component: E404Component }

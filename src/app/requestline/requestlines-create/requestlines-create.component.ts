@@ -33,7 +33,7 @@ export class RequestlinesCreateComponent implements OnInit {
     console.debug("B4", this.newRequestline);
     this.requestlinesvc.create(this.newRequestline).subscribe(
       res => {
-        console.log("Request create successful"); this.router.navigateByUrl(`/request/lines/${this.getId()}`);
+        console.log("Request created successful"); this.router.navigateByUrl(`/request/lines/${this.getId()}`);
       },
       err => {
         console.error(err);

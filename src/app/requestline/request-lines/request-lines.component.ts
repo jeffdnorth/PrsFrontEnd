@@ -44,7 +44,7 @@ export class RequestLinesComponent implements OnInit {
   Delete(id : number) : void
   {
     this.requestlinessvc.remove(id).subscribe(
-      res => { this.requestline = res; console.debug("This request successfully removed!", res);
+      res => { this.requestline = res; console.debug("This request was successfully removed!", res);
       this.router.navigateByUrl("request/list");  },
       err => { console.error(err) } );
     
