@@ -43,6 +43,7 @@ export class RequestReviewItemComponent implements OnInit {
   }
 
   approved(): void {
+      console.log("B4:", this.request);
       this.requestsvc.approve(this.request).subscribe(
           res => {
               console.debug("Request successfully approved!", res);
