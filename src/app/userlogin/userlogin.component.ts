@@ -26,7 +26,7 @@ export class UserloginComponent implements OnInit {
     (
       res=> {this.syssvc.loggedInUser = res;
       if(this.syssvc.loggedInUser != null)  {
-        this.router.navigateByUrl('/home')
+        this.router.navigateByUrl('/request/list')
       }
     },
     )

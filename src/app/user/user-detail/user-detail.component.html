@@ -1,6 +1,7 @@
 <app-menu></app-menu>
     <div>
-        <table class="table table-sm">       
+        <!--  *ngIf="user"> to get rid of the id error on rendering not a funcitonal error -->
+        <table class="table table-sm" *ngIf="user">       
                 <tr>
                     <th>Id</th>
                     <td>{{user.id}}</td>

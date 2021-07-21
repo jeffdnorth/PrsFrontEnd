@@ -1,7 +1,7 @@
 <app-menu></app-menu>
 <table *ngIf="request">
     <thead>
-        <th style="text-align: center; font-size: 1.5rem;" class="bg-dark" colspan="8">Request</th>
+     <th style="text-align: center; font-size: 1.5rem;" class="bg-dark" colspan="8">Request</th> 
     </thead>
     <tbody>
         <tr>
@@ -25,5 +25,5 @@
     </tbody>
 </table>
 <button style="margin-right: 5px;" class="btn btn-success" (click)="approved()">Approve</button>
-<button class="btn btn-danger" (click)="rejected()">Reject</button>
+ <button class="btn btn-danger" (click)="rejected()">Reject</button>  
 <span style="color: red;">{{response}}</span>

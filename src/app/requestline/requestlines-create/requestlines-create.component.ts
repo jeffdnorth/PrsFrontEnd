@@ -52,7 +52,7 @@ export class RequestlinesCreateComponent implements OnInit {
 
   getId(): number {
     const routeParams = this.route.snapshot.paramMap;
-    const id = Number(routeParams.get('id'))
+    const id = Number(routeParams.get('rid'))
     return id;
 
   }

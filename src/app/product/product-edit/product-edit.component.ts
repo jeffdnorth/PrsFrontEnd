@@ -33,7 +33,7 @@ export class ProductEditComponent implements OnInit {
   }
 
   save(): void {
-    this.product.id = +this.product.id;
+    this.product.vendorId = +this.product.vendorId;
     console.debug("B4", this.product);
     // console.debug(this.product.id);
     this.productsvc.change(this.product).subscribe(

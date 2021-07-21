@@ -28,7 +28,7 @@ remove(id: number): Observable<Request> {
     return this.http.delete(`${this.baseurl}/${id}`) as Observable<Request>;
     } 
 requests(id: number): Observable<Request[]> {
-  return this.http.get(`${this.baseurl}/${id}/needReview`) as Observable<Request[]>;
+  return this.http.get(`${this.baseurl}/reviews/${id}`) as Observable<Request[]>;
     }
 review(request: Request): Observable<Request> {
   return this.http.put(`${this.baseurl}/${request.id}/review`, request) as Observable<Request>;
